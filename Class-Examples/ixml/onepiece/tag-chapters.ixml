@@ -1,7 +1,8 @@
 volume: -"SBS Volume ", num, newline+, body.
 @num: digits.
 body: chapter++(newline, newline).
-chapter: chapter-head-line, newline+, chapter-body-line++(newline+).
+chapter: -chapter-head-line, newline+, chapter-body-line++(newline+).
+{ Attributes on chapter-head-line will appear on chapter because chapter-head-line is suppressed }
 chapter-head-line: -"Chapter ", num, -", Page ", page.
 { Thanks to Bethan Tovey-Walsh for the non-chapter-head suggestion }
 chapter-body-line = 
